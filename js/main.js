@@ -35,6 +35,18 @@ gsap.to(".hero", {
   }
 });
 
+
+gsap.to(".hero", {
+  backgroundColor: "#87ceeb", // light sky
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+
 /* ===== ABOUT SECTION ===== */
 gsap.utils.toArray(".about-card").forEach((card, i) => {
   gsap.from(card, {
