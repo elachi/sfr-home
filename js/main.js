@@ -116,15 +116,3 @@ gsap.to(".join-section", {
 });
 
 
-// Floating animation (like Jeton)
-gsap.utils.toArray(".floating").forEach((el, i) => {
-  gsap.to(el, {
-    y: "random(-20, 20)",
-    x: "random(-15, 15)",
-    duration: gsap.utils.random(3, 5),
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-    delay: i * 0.5,
-  });
-});
