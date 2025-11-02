@@ -26,7 +26,7 @@ gsap.to(".runner", {
 // Hero background transition while scrolling
 gsap.to(".hero", {
   background:
-    "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat",
+    "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/images/run hero.jpg') center/cover no-repeat",
   scrollTrigger: {
     trigger: ".hero",
     start: "top top",
