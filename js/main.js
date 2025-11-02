@@ -62,6 +62,18 @@ gsap.utils.toArray(".about-card").forEach((card, i) => {
   });
 });
 
+
+// Animated gradient background using GSAP keyframes
+gsap.to(".hero", {
+  backgroundImage:
+    "linear-gradient(120deg, #5EE7DF 0%, #B490CA 100%)",
+  duration: 10,
+  ease: "none",
+  repeat: -1,
+  yoyo: true,
+});
+
+
 /* ===== UPCOMING RUN SECTION ===== */
 const path = document.querySelector("#run-path path");
 if (path) {
