@@ -1,3 +1,4 @@
+/* ===== GLOBAL ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,11 @@
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #fff;
 }
+
+/* ===== HERO SECTION ===== */
 header.hero {
   position: relative;
   height: 100vh;
@@ -18,5 +23,145 @@ header.hero {
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
               url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1350&q=80')
               center/cover no-repeat;
+  overflow: hidden;
 }
-/* ...rest of your CSS here... */
+
+/* Runner image */
+.runner {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  width: 150px;
+  max-width: 20vw;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Hero content */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #48BB78;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== SECTION LAYOUT ===== */
+section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+  text-align: center;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.about-card {
+  background: #f4f4f4;
+  border-radius: 20px;
+  padding: 2rem;
+  flex: 1 1 200px;
+  max-width: 250px;
+  transition: transform 0.3s ease;
+}
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== UPCOMING RUN SECTION ===== */
+#upcoming-run {
+  text-align: center;
+}
+#upcoming-run h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+#run-path {
+  width: 100%;
+}
+
+/* ===== GALLERY SECTION ===== */
+.gallery {
+  text-align: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.gallery-item {
+  overflow: hidden;
+  border-radius: 15px;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== JOIN SECTION ===== */
+.join-section {
+  text-align: center;
+  background: white;
+  padding: 5rem 2rem;
+  transition: background-color 1s ease, color 1s ease;
+}
+.join-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .runner {
+    width: 100px;
+    left: 5%;
+  }
+}
