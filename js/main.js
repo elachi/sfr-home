@@ -35,6 +35,18 @@ gsap.to(".hero", {
   }
 });
 
+
+gsap.to(".hero", {
+  backgroundColor: "#87ceeb", // light sky
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+
 /* ===== ABOUT SECTION ===== */
 gsap.utils.toArray(".about-card").forEach((card, i) => {
   gsap.from(card, {
@@ -49,6 +61,18 @@ gsap.utils.toArray(".about-card").forEach((card, i) => {
     }
   });
 });
+
+
+// Animated gradient background using GSAP keyframes
+gsap.to(".hero", {
+  backgroundImage:
+    "linear-gradient(120deg, #5EE7DF 0%, #B490CA 100%)",
+  duration: 10,
+  ease: "none",
+  repeat: -1,
+  yoyo: true,
+});
+
 
 /* ===== UPCOMING RUN SECTION ===== */
 const path = document.querySelector("#run-path path");
@@ -89,4 +113,18 @@ gsap.to(".join-section", {
     end: "bottom center",
     scrub: true
   }
+});
+
+
+// Floating animation (like Jeton)
+gsap.utils.toArray(".floating").forEach((el, i) => {
+  gsap.to(el, {
+    y: "random(-20, 20)",
+    x: "random(-15, 15)",
+    duration: gsap.utils.random(3, 5),
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+    delay: i * 0.5,
+  });
 });
