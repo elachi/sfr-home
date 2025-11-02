@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stockholm Frontrunners</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    header.hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1350&q=80')
+                  center/cover no-repeat;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: #48BB78;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about {
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .about-card {
+      background: #f4f4f4;
+      border-radius: 20px;
+      padding: 2rem;
+      flex: 1 1 200px;
+      max-width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .join-section {
+      text-align: center;
+      background: white;
+      padding: 5rem 2rem;
+      transition: background-color 1s ease;
+    }
+
+    .join-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Run With Pride</h1>
+      <p>Join Stockholm Frontrunners — a community for everyone.</p>
+      <button class="btn-primary">Join Us</button>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>Who We Are</h2>
+    <div class="about-cards">
+      <div class="about-card">Community</div>
+      <div class="about-card">Inclusion</div>
+      <div class="about-card">Energy</div>
+      <div class="about-card">Fun</div>
+    </div>
+  </section>
+
+  <section id="upcoming-run">
+    <h2 style="text-align:center; margin-bottom:2rem;">Upcoming Run</h2>
+    <svg id="run-path" width="100%" height="100" viewBox="0 0 1000 100">
+      <path d="M10 80 Q 250 10, 500 80 T 990 80" stroke="#48BB78" stroke-width="5" fill="none" />
+    </svg>
+  </section>
+
+  <section class="gallery">
+    <h2 style="text-align:center; margin-bottom:2rem;">Our Community</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?auto=format&fit=crop&w=800&q=80" alt="Run"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80" alt="Group"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1520975918318-3a27e3e43a52?auto=format&fit=crop&w=800&q=80" alt="Friends"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1514516870926-206c2141d25a?auto=format&fit=crop&w=800&q=80" alt="Run"></div>
+    </div>
+  </section>
+
+  <section class="join-section">
+    <h2>Join the Movement</h2>
+    <p>Be part of Stockholm Frontrunners and celebrate diversity through running.</p>
+    <button class="btn-primary">Become a Member</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Stockholm Frontrunners. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ✅ GSAP + ScrollTrigger scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero animation
+    gsap.from('.hero-content', {
+      opacity: 0,
+      y: 50,
+      duration: 1.2,
+      ease: 'power3.out'
+    });
+
+    // About cards animation
+    gsap.utils.toArray('.about-card').forEach((card, i) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 80,
+        duration: 0.8,
+        delay: i * 0.2,
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+    });
+
+    // Run path animation
+    const path = document.querySelector('#run-path path');
+    if (path) {
+      const length = path.getTotalLength();
+      gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        duration: 2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '#upcoming-run',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+    }
+
+    // Gallery animation
+    gsap.from('.gallery-item', {
+      opacity: 0,
+      scale: 0.95,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.gallery-grid',
+        start: 'top 80%'
+      }
+    });
+
+    // Join section color change
+    gsap.to('.join-section', {
+      backgroundColor: '#48BB78',
+      color: '#fff',
+      scrollTrigger: {
+        trigger: '.join-section',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true
+      }
+    });
+  </script>
+</body>
+</html>
